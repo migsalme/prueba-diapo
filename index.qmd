@@ -25,7 +25,9 @@ accidentes_tb
 ## Resumen
 
 ```{r}
-resumen <- accidentes_tb |> count(sexo)
+resumen <- accidentes_tb |> 
+  filter (sexo != "Desconocido") |> 
+  count(sexo)
 resumen
 ```
 
